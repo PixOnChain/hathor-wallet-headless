@@ -1,7 +1,7 @@
 module.exports = {
   // HTTP API Settings
   http_bind_address: 'localhost',
-  http_port: 8000,
+  http_port: process.env.PORT,
 
   // Uncomment the following line to enable API Key Auth.
   // http_api_key: 'YOUR_PRIVATE_KEY',
@@ -16,7 +16,8 @@ module.exports = {
   txMiningUrl: null,
 
   // Atomic Swap Service
-  // This is optional. If you do not set, the mainnet or testnet URL will be used, according to the `network` setting
+  // This is optional. If you do not set, the mainnet or testnet URL will be used,
+  // according to the `network` setting
   // above. Use it only if you want to use your own Atomic Swap Service, e.g. 'https://my-atomic-swap-service.domain/'
   atomicSwapService: null,
 
@@ -40,12 +41,14 @@ module.exports = {
 
   // Wallet seeds
   seeds: {
-      default: '',
+    default: 'mercy outdoor neck season already cute battle erode tenant cheese kitchen project diamond federal wagon bleak property success crazy minimum flavor gate verb message',
   },
 
   // Optional wallet multisig configuration
-  // Use the seedKey as key and the value should have `total` (max no. of signatures), `numSignatures` (required no. of signatures) and `pubkeys` as a list of participant pubkeys.
-  // Ex.: { default: { total: 3, numSignatures: 2, pubkeys: [ 'xpub1...', 'xpub2...', 'xpub3...'] } }
+  // Use the seedKey as key and the value should have `total` (max no. of signatures),
+  // `numSignatures` (required no. of signatures) and `pubkeys` as a list of participant pubkeys.
+  // Ex.: { default: { total: 3, numSignatures: 2, pubkeys: [ 'xpub1...', 'xpub2...',
+  // 'xpub3...'] } }
   // The total should match the length of the pubkeys, this can be configured for any seed
   multisig: {},
 
@@ -70,7 +73,8 @@ module.exports = {
   */
 
   // Optional config so you can set the token you want to use in this wallet
-  // If this parameter is set you don't need to pass your token when getting balance or sending tokens
+  // If this parameter is set you don't need to pass your token when getting balance
+  // or sending tokens
   tokenUid: '',
 
   // Maximum number of addresses to be generated in sequence without usage

@@ -5,8 +5,13 @@ const argv = yargs(hideBin(process.argv)).argv;
 
 function getParam(name, _default) {
   const envname = 'HEADLESS_' + name.toUpperCase();
-  return argv[name] || process.env[envname] || _default;
+  const value = argv[name] || process.env[envname] || _default;
+  
+  console.log(`DEBUG getParam("${name}") ->`, value); // Debug
+  
+  return value;
 }
+
 
 function getIntParam(name, _default) {
   const param = getParam(name, _default);

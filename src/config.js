@@ -1,7 +1,7 @@
 module.exports = {
   // HTTP API Settings
   http_bind_address: 'localhost',
-  http_port: process.env.PORT,
+  http_port: 8000,
 
   // Uncomment the following line to enable API Key Auth.
   // http_api_key: 'YOUR_PRIVATE_KEY',
